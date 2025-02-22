@@ -1,99 +1,133 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+*{
     padding: 0;
-    color: #333;
-    background-image: url('images/up_title.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-family: Arial, sans-serif, Helvetica, "Newsreader", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #f6f2e9;
 }
 
-body::before {
-    content: '';
-    position: absolute;
+body{
+    background-color: black;
+}
+
+#back{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/up_title.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     top: 0;
-    left: 0;
     right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: blur(10px);
-    z-index: -1;
+    opacity: 0.6;
 }
 
-header {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-image: url('images/up_title.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section-warp{
+    width: 75%;
+    height: 75vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    backdrop-filter: blur(8px);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 999;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+.head-logo{
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span{
+    color: #ff6925;
+}
+
+.nav-item{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 15px;
+    cursor: pointer;
     position: relative;
 }
 
-header h1 {
-    margin: 0;
+.nav-item::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f6f2e9;
+    bottom: -10px;
+    right: 0;
+    box-shadow: 0 0 5px #f6f2e9;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.3s;
 }
 
-nav {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+.nav-item:hover::before{
+    transform: scaleX(1);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.active{
+    color:#ff6925;
+    font-weight: bold;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.active::before{
+    background-color: #ff6925;
+    box-shadow: 0 0 5px #ff6925;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.hr-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
 }
 
-.container {
-    position: relative;
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.8); /* 添加半透明背景以确保内容可读 */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 1200px;
+.ct-right img{
+    width: 100%;
 }
 
-section {
-    margin: 20px 0;
+.ct-right,
+.ct-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-section h2 {
-    border-bottom: 2px solid #0073e6;
-    padding-bottom: 10px;
+.headline{
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    line-height: 1.2;
 }
 
-.profile-img {
-    width: 179px;
-    height: 110px;
-    border-radius: 0%;
-    display: block;
-    margin: 0 auto 20px;
+.hr-description{
+    font-size: 1rem;
+    color: #d3cfc6;
+    line-height: 1.6;
+    margin-bottom: 50px;
 }
 
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+#location{
+    font-size: 1rem;
+    background-color: transparent;
 }
