@@ -31,7 +31,7 @@ section{
     height: 100vh;
 }
 
-.section-warp1, .section-warp2, .section-warp3, .section-warp4, .section-warp5{
+.section-warp1, .section-warp2, .section-warp3, .section-warp4, .section-warp5, .footer-warp6{
     width: 75%;
     height: 75vh;
     background-color: rgba(255, 255, 255, 0.2);
@@ -187,3 +187,35 @@ span{
 }
 
 /*hua dong zhuan tu     over*/
+
+
+/*footer*/
+.socials{
+    text-align: center;
+}
+
+.socials i{
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 25px;
+}
+
+.socials i:hover{
+    color: #ff6925;
+}
+
+.footer-content{
+    font-size: 0.8rem;
+    color: #d3cfc6;
+    text-align: center;
+}
+
+#footer{
+    height: auto;
+}
+
+#footer .footer-warp6{
+    margin: 50px auto;
+    height: auto;
+}
